@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b6c4d1c1e1a7f3f878cb981d563ab4ab {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:20px"><b>LORETO - Concentration</b></h3>
+    <p align="center">3 hospitals within 10km radius</p>
+    
+    
+            <div class="folium-map" id="map_b6c4d1c1e1a7f3f878cb981d563ab4ab" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b6c4d1c1e1a7f3f878cb981d563ab4ab = L.map(
+                "map_b6c4d1c1e1a7f3f878cb981d563ab4ab",
+                {
+                    center: [-3.7492695309999258, -73.25946288999995],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_beb69407220a3f493f78cca6cd82dbb1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_beb69407220a3f493f78cca6cd82dbb1.addTo(map_b6c4d1c1e1a7f3f878cb981d563ab4ab);
+        
+    
+            var marker_be63c846a9a541c3d180ca00b3a71db4 = L.marker(
+                [-3.7492695309999258, -73.25946288999995],
+                {
+}
+            ).addTo(map_b6c4d1c1e1a7f3f878cb981d563ab4ab);
+        
+    
+            var icon_27ba77d35731343ee36ac98d2e46e7c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20bd52975ce25483826c996f9fdbad40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4b0816fab5141ea39648803434ffbe2 = $(`<div id="html_f4b0816fab5141ea39648803434ffbe2" style="width: 100.0%; height: 100.0%;">Population Center<br>Concentration<br>3 hospitals within 10km</div>`)[0];
+                popup_20bd52975ce25483826c996f9fdbad40.setContent(html_f4b0816fab5141ea39648803434ffbe2);
+            
+        
+
+        marker_be63c846a9a541c3d180ca00b3a71db4.bindPopup(popup_20bd52975ce25483826c996f9fdbad40)
+        ;
+
+        
+    
+    
+                marker_be63c846a9a541c3d180ca00b3a71db4.setIcon(icon_27ba77d35731343ee36ac98d2e46e7c5);
+            
+    
+            var circle_11381efa68720cafe4f3638fd0d8d944 = L.circle(
+                [-3.7492695309999258, -73.25946288999995],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_b6c4d1c1e1a7f3f878cb981d563ab4ab);
+        
+    
+        var popup_2f05ad20bea98b199ff8d5353cbc29a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6947694583c5acc15eddbdc1c19d9e7 = $(`<div id="html_b6947694583c5acc15eddbdc1c19d9e7" style="width: 100.0%; height: 100.0%;">10km buffer</div>`)[0];
+                popup_2f05ad20bea98b199ff8d5353cbc29a7.setContent(html_b6947694583c5acc15eddbdc1c19d9e7);
+            
+        
+
+        circle_11381efa68720cafe4f3638fd0d8d944.bindPopup(popup_2f05ad20bea98b199ff8d5353cbc29a7)
+        ;
+
+        
+    
+    
+            var marker_7ce69270999f8d702f743a2a3c0498a6 = L.marker(
+                [-3.7628180000000073, -73.253653],
+                {
+}
+            ).addTo(map_b6c4d1c1e1a7f3f878cb981d563ab4ab);
+        
+    
+            var icon_962f773b93ef6b2f93407f3a18b4e277 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db30961208a6851b37f048ae72c03270 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75259711848586e5c35fbcc503861ab4 = $(`<div id="html_75259711848586e5c35fbcc503861ab4" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_db30961208a6851b37f048ae72c03270.setContent(html_75259711848586e5c35fbcc503861ab4);
+            
+        
+
+        marker_7ce69270999f8d702f743a2a3c0498a6.bindPopup(popup_db30961208a6851b37f048ae72c03270)
+        ;
+
+        
+    
+    
+                marker_7ce69270999f8d702f743a2a3c0498a6.setIcon(icon_962f773b93ef6b2f93407f3a18b4e277);
+            
+    
+            var marker_cf75f101a57330fbf5efe30e3d767612 = L.marker(
+                [-3.7188407999999944, -73.2439423],
+                {
+}
+            ).addTo(map_b6c4d1c1e1a7f3f878cb981d563ab4ab);
+        
+    
+            var icon_ef23f4b7d0859673155deec378ed1435 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48e7ecb8b46800580d6598fb2cff341e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a1025457be969b1e0cd3ede2f614b88 = $(`<div id="html_6a1025457be969b1e0cd3ede2f614b88" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL III IQUITOS<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_48e7ecb8b46800580d6598fb2cff341e.setContent(html_6a1025457be969b1e0cd3ede2f614b88);
+            
+        
+
+        marker_cf75f101a57330fbf5efe30e3d767612.bindPopup(popup_48e7ecb8b46800580d6598fb2cff341e)
+        ;
+
+        
+    
+    
+                marker_cf75f101a57330fbf5efe30e3d767612.setIcon(icon_ef23f4b7d0859673155deec378ed1435);
+            
+    
+            var marker_f1a2f3c52ddf0dc891440f7045a79099 = L.marker(
+                [-3.7269604799999994, -73.25341698],
+                {
+}
+            ).addTo(map_b6c4d1c1e1a7f3f878cb981d563ab4ab);
+        
+    
+            var icon_9bc4183bc7f59f4d96ab66bd6ad91e00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4f3432ca80d22cdb32836b68ee438dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8670f106c22d2eb7ed8e717f2f5b0537 = $(`<div id="html_8670f106c22d2eb7ed8e717f2f5b0537" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_f4f3432ca80d22cdb32836b68ee438dd.setContent(html_8670f106c22d2eb7ed8e717f2f5b0537);
+            
+        
+
+        marker_f1a2f3c52ddf0dc891440f7045a79099.bindPopup(popup_f4f3432ca80d22cdb32836b68ee438dd)
+        ;
+
+        
+    
+    
+                marker_f1a2f3c52ddf0dc891440f7045a79099.setIcon(icon_9bc4183bc7f59f4d96ab66bd6ad91e00);
+            
+</script>
+</html>
