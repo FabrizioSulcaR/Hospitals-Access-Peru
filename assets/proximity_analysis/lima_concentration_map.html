@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4567fe1c103493eddfc109fd18f01ea9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:20px"><b>LIMA - Concentration</b></h3>
+    <p align="center">21 hospitals within 10km radius</p>
+    
+    
+            <div class="folium-map" id="map_4567fe1c103493eddfc109fd18f01ea9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4567fe1c103493eddfc109fd18f01ea9 = L.map(
+                "map_4567fe1c103493eddfc109fd18f01ea9",
+                {
+                    center: [-12.051530214999957, -77.03187863799997],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aab02671fbf2468ae93f0d6fed2f338f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_aab02671fbf2468ae93f0d6fed2f338f.addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var marker_e6d6e9af32d3461c66553ddbc78f696b = L.marker(
+                [-12.051530214999957, -77.03187863799997],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_ea1db355087db4c6dd809ad3384c1185 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_767ed00ae7c94748b09711c00030059e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e76b0fbf4a76da9c52b2b7867a9bc30 = $(`<div id="html_4e76b0fbf4a76da9c52b2b7867a9bc30" style="width: 100.0%; height: 100.0%;">Population Center<br>Concentration<br>21 hospitals within 10km</div>`)[0];
+                popup_767ed00ae7c94748b09711c00030059e.setContent(html_4e76b0fbf4a76da9c52b2b7867a9bc30);
+            
+        
+
+        marker_e6d6e9af32d3461c66553ddbc78f696b.bindPopup(popup_767ed00ae7c94748b09711c00030059e)
+        ;
+
+        
+    
+    
+                marker_e6d6e9af32d3461c66553ddbc78f696b.setIcon(icon_ea1db355087db4c6dd809ad3384c1185);
+            
+    
+            var circle_741c1ed2ecc3103b45ebaea14e06c510 = L.circle(
+                [-12.051530214999957, -77.03187863799997],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+        var popup_d2cc41a5120aeb679d80467de8f91dc1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f83060ef782ca9be9f8e1feb8ed0f1c = $(`<div id="html_9f83060ef782ca9be9f8e1feb8ed0f1c" style="width: 100.0%; height: 100.0%;">10km buffer</div>`)[0];
+                popup_d2cc41a5120aeb679d80467de8f91dc1.setContent(html_9f83060ef782ca9be9f8e1feb8ed0f1c);
+            
+        
+
+        circle_741c1ed2ecc3103b45ebaea14e06c510.bindPopup(popup_d2cc41a5120aeb679d80467de8f91dc1)
+        ;
+
+        
+    
+    
+            var marker_95352717a1e49c3a9417f617ba16fc04 = L.marker(
+                [-11.97723000000001, -77.0656159],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_fd5332aee7c79033556d807f479bb04b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84c159b724886675e1819e25efeecc0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_775fe7517ff1de852d599e8680711503 = $(`<div id="html_775fe7517ff1de852d599e8680711503" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL MUNICIPAL LOS OLIVOS<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_84c159b724886675e1819e25efeecc0d.setContent(html_775fe7517ff1de852d599e8680711503);
+            
+        
+
+        marker_95352717a1e49c3a9417f617ba16fc04.bindPopup(popup_84c159b724886675e1819e25efeecc0d)
+        ;
+
+        
+    
+    
+                marker_95352717a1e49c3a9417f617ba16fc04.setIcon(icon_fd5332aee7c79033556d807f479bb04b);
+            
+    
+            var marker_457314bed4119b51b9e158125db48eb3 = L.marker(
+                [-12.087119700000004, -77.0619786],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_13f4e17300ba5ec75e2512bdda06f693 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7a98664b325dd53233b07696e93f87d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1e5c6eefdfeb3fe3f368112fe13beac = $(`<div id="html_a1e5c6eefdfeb3fe3f368112fe13beac" style="width: 100.0%; height: 100.0%;">Hospital: LUIS ARIAS SCHEREIBER - HOSPITAL MILITAR CENTRAL<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_b7a98664b325dd53233b07696e93f87d.setContent(html_a1e5c6eefdfeb3fe3f368112fe13beac);
+            
+        
+
+        marker_457314bed4119b51b9e158125db48eb3.bindPopup(popup_b7a98664b325dd53233b07696e93f87d)
+        ;
+
+        
+    
+    
+                marker_457314bed4119b51b9e158125db48eb3.setIcon(icon_13f4e17300ba5ec75e2512bdda06f693);
+            
+    
+            var marker_27b4094c0416e48ca14cfd28e109bfdd = L.marker(
+                [-12.047578329999993, -76.947995],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_ccca1b40f2a7eaeb225430de057cdada = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e81d11e887e8d14142b579c0f98b06b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cbf556424f37d7a4d15d99813a8844e9 = $(`<div id="html_cbf556424f37d7a4d15d99813a8844e9" style="width: 100.0%; height: 100.0%;">Hospital: SEGURO SOCIAL DE SALUD - ESSALUD<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_e81d11e887e8d14142b579c0f98b06b4.setContent(html_cbf556424f37d7a4d15d99813a8844e9);
+            
+        
+
+        marker_27b4094c0416e48ca14cfd28e109bfdd.bindPopup(popup_e81d11e887e8d14142b579c0f98b06b4)
+        ;
+
+        
+    
+    
+                marker_27b4094c0416e48ca14cfd28e109bfdd.setIcon(icon_ccca1b40f2a7eaeb225430de057cdada);
+            
+    
+            var marker_7a6f15a6663720ffdab5f3385dbe78cd = L.marker(
+                [-12.044340799999992, -77.0440331],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_8edf0bed25af772bb0dff8f9c4b19814 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e82f998e5c277953d32a30d5c4f7453 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f36a0fde8ef80ba7932a4b8b20fb914 = $(`<div id="html_9f36a0fde8ef80ba7932a4b8b20fb914" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL II RAM�N CASTILLA<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_9e82f998e5c277953d32a30d5c4f7453.setContent(html_9f36a0fde8ef80ba7932a4b8b20fb914);
+            
+        
+
+        marker_7a6f15a6663720ffdab5f3385dbe78cd.bindPopup(popup_9e82f998e5c277953d32a30d5c4f7453)
+        ;
+
+        
+    
+    
+                marker_7a6f15a6663720ffdab5f3385dbe78cd.setIcon(icon_8edf0bed25af772bb0dff8f9c4b19814);
+            
+    
+            var marker_54884ffa73e939d69612d54a90cd66f1 = L.marker(
+                [-12.058957099999995, -77.0312779],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_2fedd31044e476b1537001fb4cb7ee01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7b69c5f15394a0daf16928e25fd89ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5e1a30496340ce5af3cebbc328ba3ed = $(`<div id="html_d5e1a30496340ce5af3cebbc328ba3ed" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL III EMERGENCIAS GRAU<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_a7b69c5f15394a0daf16928e25fd89ae.setContent(html_d5e1a30496340ce5af3cebbc328ba3ed);
+            
+        
+
+        marker_54884ffa73e939d69612d54a90cd66f1.bindPopup(popup_a7b69c5f15394a0daf16928e25fd89ae)
+        ;
+
+        
+    
+    
+                marker_54884ffa73e939d69612d54a90cd66f1.setIcon(icon_2fedd31044e476b1537001fb4cb7ee01);
+            
+    
+            var marker_c52769c5615e51494da1c3c2e254acee = L.marker(
+                [-12.057170499999998, -77.0162686],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_0008ccf62dfb0a05c7f5f6db1c3d0f37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05a626fd28a2a93f5d7970d0f838ebb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b45e89d1ae0d3a908e5b2eb7c15794f8 = $(`<div id="html_b45e89d1ae0d3a908e5b2eb7c15794f8" style="width: 100.0%; height: 100.0%;">Hospital: NACIONAL  DOS DE MAYO<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_05a626fd28a2a93f5d7970d0f838ebb2.setContent(html_b45e89d1ae0d3a908e5b2eb7c15794f8);
+            
+        
+
+        marker_c52769c5615e51494da1c3c2e254acee.bindPopup(popup_05a626fd28a2a93f5d7970d0f838ebb2)
+        ;
+
+        
+    
+    
+                marker_c52769c5615e51494da1c3c2e254acee.setIcon(icon_0008ccf62dfb0a05c7f5f6db1c3d0f37);
+            
+    
+            var marker_cb46a1f1efa99d308700c79f7480e35b = L.marker(
+                [-12.062130999999995, -76.9455439],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_acdaf1da3191b1df63db01b27c5df2b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86b0ce4a8376da689b2673e7c5b957d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a3cd30565ec6b8464eccf20545806b1 = $(`<div id="html_9a3cd30565ec6b8464eccf20545806b1" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL I CARLOS ALCANTARA BUTTERFIELD<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_86b0ce4a8376da689b2673e7c5b957d0.setContent(html_9a3cd30565ec6b8464eccf20545806b1);
+            
+        
+
+        marker_cb46a1f1efa99d308700c79f7480e35b.bindPopup(popup_86b0ce4a8376da689b2673e7c5b957d0)
+        ;
+
+        
+    
+    
+                marker_cb46a1f1efa99d308700c79f7480e35b.setIcon(icon_acdaf1da3191b1df63db01b27c5df2b6);
+            
+    
+            var marker_8876ce47bd6ad39a29bb4348d4ad59bf = L.marker(
+                [-12.098705000000008, -77.065756],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_5269a5ee25b5855fde47e6a37e2a116d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1bac4c0f4f677356d227c93c8715511a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b00fad75f60b6f2c2be239efa32d047b = $(`<div id="html_b00fad75f60b6f2c2be239efa32d047b" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL VICTOR LARCO HERRERA<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_1bac4c0f4f677356d227c93c8715511a.setContent(html_b00fad75f60b6f2c2be239efa32d047b);
+            
+        
+
+        marker_8876ce47bd6ad39a29bb4348d4ad59bf.bindPopup(popup_1bac4c0f4f677356d227c93c8715511a)
+        ;
+
+        
+    
+    
+                marker_8876ce47bd6ad39a29bb4348d4ad59bf.setIcon(icon_5269a5ee25b5855fde47e6a37e2a116d);
+            
+    
+            var marker_4b8b90b6231c206f21925ed675196e0c = L.marker(
+                [-12.0498454, -77.0425597],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_a0aaacf0b2812b706c8f7a2ea6b42706 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e20c3d9ffe0ecea470119fb690bb65a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a32fdec8f801635970c2159cd29608c1 = $(`<div id="html_a32fdec8f801635970c2159cd29608c1" style="width: 100.0%; height: 100.0%;">Hospital: NACIONAL ARZOBISPO LOAYZA<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_e20c3d9ffe0ecea470119fb690bb65a6.setContent(html_a32fdec8f801635970c2159cd29608c1);
+            
+        
+
+        marker_4b8b90b6231c206f21925ed675196e0c.bindPopup(popup_e20c3d9ffe0ecea470119fb690bb65a6)
+        ;
+
+        
+    
+    
+                marker_4b8b90b6231c206f21925ed675196e0c.setIcon(icon_a0aaacf0b2812b706c8f7a2ea6b42706);
+            
+    
+            var marker_fa128891844ae3a6735f60afd939ce4e = L.marker(
+                [-12.113623399999994, -77.0279933],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_0f456e34d152ca6ec09e5bfea7993960 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94fd2c32d8fb81adf3b4dcc31b3b3d50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b870619379eb173d4468119f45718b1c = $(`<div id="html_b870619379eb173d4468119f45718b1c" style="width: 100.0%; height: 100.0%;">Hospital: ESSALUD - HOSPITAL II SU�REZ ANGAMOS<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_94fd2c32d8fb81adf3b4dcc31b3b3d50.setContent(html_b870619379eb173d4468119f45718b1c);
+            
+        
+
+        marker_fa128891844ae3a6735f60afd939ce4e.bindPopup(popup_94fd2c32d8fb81adf3b4dcc31b3b3d50)
+        ;
+
+        
+    
+    
+                marker_fa128891844ae3a6735f60afd939ce4e.setIcon(icon_0f456e34d152ca6ec09e5bfea7993960);
+            
+    
+            var marker_d85ec711ceb287b2b6cec521004d21ac = L.marker(
+                [-12.103423330000005, -77.029825],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_14c8acb19d580ff29e6a40306371fd5a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f77d07094bf9f9d5c31bfc8a32f2c79f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_666adf8d6afde0bff7dcfd91b414f714 = $(`<div id="html_666adf8d6afde0bff7dcfd91b414f714" style="width: 100.0%; height: 100.0%;">Hospital: FUERZA AEREA DEL PERU<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_f77d07094bf9f9d5c31bfc8a32f2c79f.setContent(html_666adf8d6afde0bff7dcfd91b414f714);
+            
+        
+
+        marker_d85ec711ceb287b2b6cec521004d21ac.bindPopup(popup_f77d07094bf9f9d5c31bfc8a32f2c79f)
+        ;
+
+        
+    
+    
+                marker_d85ec711ceb287b2b6cec521004d21ac.setIcon(icon_14c8acb19d580ff29e6a40306371fd5a);
+            
+    
+            var marker_cd2c62a700b74444e43ec9fcf2d9b9b8 = L.marker(
+                [-12.039974300000006, -76.9935755],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_16bc75059f994d64bc93ba0f0700ad53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0dca7e5053769385c33d7501516de21b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5aeb8e0be339b9a5b4696ac544ae771f = $(`<div id="html_5aeb8e0be339b9a5b4696ac544ae771f" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL NACIONAL HIPOLITO UNANUE<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_0dca7e5053769385c33d7501516de21b.setContent(html_5aeb8e0be339b9a5b4696ac544ae771f);
+            
+        
+
+        marker_cd2c62a700b74444e43ec9fcf2d9b9b8.bindPopup(popup_0dca7e5053769385c33d7501516de21b)
+        ;
+
+        
+    
+    
+                marker_cd2c62a700b74444e43ec9fcf2d9b9b8.setIcon(icon_16bc75059f994d64bc93ba0f0700ad53);
+            
+    
+            var marker_c6b0e76613e1f7ceaa8690ebcd5a2e16 = L.marker(
+                [-12.046827099999998, -76.9454975],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_bfab2147f1e458e1c983e638ad3ae397 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65cd05071907c37528b538149e965018 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8ddbe609cb31582fa527d71b1506605 = $(`<div id="html_d8ddbe609cb31582fa527d71b1506605" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL HERMILIO VALDIZAN<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_65cd05071907c37528b538149e965018.setContent(html_d8ddbe609cb31582fa527d71b1506605);
+            
+        
+
+        marker_c6b0e76613e1f7ceaa8690ebcd5a2e16.bindPopup(popup_65cd05071907c37528b538149e965018)
+        ;
+
+        
+    
+    
+                marker_c6b0e76613e1f7ceaa8690ebcd5a2e16.setIcon(icon_bfab2147f1e458e1c983e638ad3ae397);
+            
+    
+            var marker_5db365fd56c1ff260e393be4dd37bd94 = L.marker(
+                [-12.065961199999995, -77.0945832],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_bb01d0a190e0401acb51c33bdd07aa78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9ca07833cad2f61e8a666d95d5e7697f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4be31f5d4963141216e662002203d5d = $(`<div id="html_c4be31f5d4963141216e662002203d5d" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL I OCTAVIO MONGRUT MU�OZ<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_9ca07833cad2f61e8a666d95d5e7697f.setContent(html_c4be31f5d4963141216e662002203d5d);
+            
+        
+
+        marker_5db365fd56c1ff260e393be4dd37bd94.bindPopup(popup_9ca07833cad2f61e8a666d95d5e7697f)
+        ;
+
+        
+    
+    
+                marker_5db365fd56c1ff260e393be4dd37bd94.setIcon(icon_bb01d0a190e0401acb51c33bdd07aa78);
+            
+    
+            var marker_bebb22bae9a491747b9005e41509aaf4 = L.marker(
+                [-11.966577400000006, -77.0030573],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_88d118c402efd7a80f12aa4b275af8df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2080e6ef684ed94adbaade3c1b68156 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fb5c449f82c643c2e0e40bf4416c851 = $(`<div id="html_7fb5c449f82c643c2e0e40bf4416c851" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL SAN JUAN DE LURIGANCHO<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_d2080e6ef684ed94adbaade3c1b68156.setContent(html_7fb5c449f82c643c2e0e40bf4416c851);
+            
+        
+
+        marker_bebb22bae9a491747b9005e41509aaf4.bindPopup(popup_d2080e6ef684ed94adbaade3c1b68156)
+        ;
+
+        
+    
+    
+                marker_bebb22bae9a491747b9005e41509aaf4.setIcon(icon_88d118c402efd7a80f12aa4b275af8df);
+            
+    
+            var marker_ae54c8e784b7409589a7f9e5372f8226 = L.marker(
+                [-12.083974600000001, -77.0611078],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_182066bb3eedce9ef82de5dfec81514d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1fdfdc5a40b20a841ca28f5c1ebfd1d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e33438f908b9b1d5338513885796a04 = $(`<div id="html_6e33438f908b9b1d5338513885796a04" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL NACIONAL POLICIA NACIONAL DEL PERU GRAL PNP LUIS N. SAENZ.<br>Type: HOSPITALES O CLINICAS DE ATENCION GENERAL</div>`)[0];
+                popup_1fdfdc5a40b20a841ca28f5c1ebfd1d3.setContent(html_6e33438f908b9b1d5338513885796a04);
+            
+        
+
+        marker_ae54c8e784b7409589a7f9e5372f8226.bindPopup(popup_1fdfdc5a40b20a841ca28f5c1ebfd1d3)
+        ;
+
+        
+    
+    
+                marker_ae54c8e784b7409589a7f9e5372f8226.setIcon(icon_182066bb3eedce9ef82de5dfec81514d);
+            
+    
+            var marker_37a9125b6d830b14ac32e1c3e2993d81 = L.marker(
+                [-12.058170800000005, -77.0217293],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_244e11f411db108afce2840552fe2117 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dac04b0075c747f7e4d9a8ef5e353650 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a18c32dbe6aec72938253a4122420100 = $(`<div id="html_a18c32dbe6aec72938253a4122420100" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL DE EMERGENCIAS PEDIATRICAS<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_dac04b0075c747f7e4d9a8ef5e353650.setContent(html_a18c32dbe6aec72938253a4122420100);
+            
+        
+
+        marker_37a9125b6d830b14ac32e1c3e2993d81.bindPopup(popup_dac04b0075c747f7e4d9a8ef5e353650)
+        ;
+
+        
+    
+    
+                marker_37a9125b6d830b14ac32e1c3e2993d81.setIcon(icon_244e11f411db108afce2840552fe2117);
+            
+    
+            var marker_a1b22ab9d847190f486ffac115a27e1b = L.marker(
+                [-12.022021599999999, -77.0544967],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_f8ccf3e2c3d3005b596e8865064ae405 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc80b724ca35c8717da3f6714a1c3c00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_030d141e1b10a3bbc865dd5436d1bfd0 = $(`<div id="html_030d141e1b10a3bbc865dd5436d1bfd0" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL NACIONAL CAYETANO HEREDIA<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_fc80b724ca35c8717da3f6714a1c3c00.setContent(html_030d141e1b10a3bbc865dd5436d1bfd0);
+            
+        
+
+        marker_a1b22ab9d847190f486ffac115a27e1b.bindPopup(popup_fc80b724ca35c8717da3f6714a1c3c00)
+        ;
+
+        
+    
+    
+                marker_a1b22ab9d847190f486ffac115a27e1b.setIcon(icon_f8ccf3e2c3d3005b596e8865064ae405);
+            
+    
+            var marker_1f2a72864ea0f4d0498d755bf2f9a700 = L.marker(
+                [-12.128210699999999, -77.0180619],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_e73b1f7f430c6d96dcbd91af6b482832 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ee0791eeda8e6d9d99a032975912585 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47cdc1f2ed5f82eb47aaf7c00036f2db = $(`<div id="html_47cdc1f2ed5f82eb47aaf7c00036f2db" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL DE EMERGENCIAS JOSE CASIMIRO ULLOA<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_8ee0791eeda8e6d9d99a032975912585.setContent(html_47cdc1f2ed5f82eb47aaf7c00036f2db);
+            
+        
+
+        marker_1f2a72864ea0f4d0498d755bf2f9a700.bindPopup(popup_8ee0791eeda8e6d9d99a032975912585)
+        ;
+
+        
+    
+    
+                marker_1f2a72864ea0f4d0498d755bf2f9a700.setIcon(icon_e73b1f7f430c6d96dcbd91af6b482832);
+            
+    
+            var marker_16d1910047674c16ca0af6725fb0f75c = L.marker(
+                [-12.07160159999999, -77.06106510000001],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_85c38b8f2125dff46fcc6f7dff40e305 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08d08d78333b751eb174d170d32b6a6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a337304a48c8388627befdf4278aef11 = $(`<div id="html_a337304a48c8388627befdf4278aef11" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL DE APOYO SANTA ROSA<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_08d08d78333b751eb174d170d32b6a6b.setContent(html_a337304a48c8388627befdf4278aef11);
+            
+        
+
+        marker_16d1910047674c16ca0af6725fb0f75c.bindPopup(popup_08d08d78333b751eb174d170d32b6a6b)
+        ;
+
+        
+    
+    
+                marker_16d1910047674c16ca0af6725fb0f75c.setIcon(icon_85c38b8f2125dff46fcc6f7dff40e305);
+            
+    
+            var marker_7e93c78746e6ef663cadff59041a728d = L.marker(
+                [-12.049917899999995, -77.0423608],
+                {
+}
+            ).addTo(map_4567fe1c103493eddfc109fd18f01ea9);
+        
+    
+            var icon_ae026e3cf6472d902829ea285c6120a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d52b8fe3e8fb79fd6557ec14c48a8c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7593b3495e25ced0102bb125d6259026 = $(`<div id="html_7593b3495e25ced0102bb125d6259026" style="width: 100.0%; height: 100.0%;">Hospital: HOSPITAL NACIONAL DOCENTE MADRE NI�O SAN BARTOLOME<br>Type: HOSPITALES O CLINICAS DE ATENCION ESPECIALIZADA</div>`)[0];
+                popup_2d52b8fe3e8fb79fd6557ec14c48a8c6.setContent(html_7593b3495e25ced0102bb125d6259026);
+            
+        
+
+        marker_7e93c78746e6ef663cadff59041a728d.bindPopup(popup_2d52b8fe3e8fb79fd6557ec14c48a8c6)
+        ;
+
+        
+    
+    
+                marker_7e93c78746e6ef663cadff59041a728d.setIcon(icon_ae026e3cf6472d902829ea285c6120a2);
+            
+</script>
+</html>

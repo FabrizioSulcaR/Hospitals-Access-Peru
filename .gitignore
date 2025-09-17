@@ -3,3 +3,5 @@ __pycache__
 *.ipynb
 .ipynb_checkpoints
 *.drawio
+venv/
+assets/national_choropleth_hospitals.html

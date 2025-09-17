@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2537b557bf80fe1567fb0ec1764ec00a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2537b557bf80fe1567fb0ec1764ec00a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2537b557bf80fe1567fb0ec1764ec00a = L.map(
+                "map_2537b557bf80fe1567fb0ec1764ec00a",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 1,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a48f3dc5aa2b472d32d727259c9eb721 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a48f3dc5aa2b472d32d727259c9eb721.addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+            map_2537b557bf80fe1567fb0ec1764ec00a.fitBounds(
+                [[-8.715191383665228, -77.82595798699998], [-0.03860596799995619, -69.94903935499991]],
+                {}
+            );
+        
+    
+            var circle_045eb8b6dc15c8be76dd8cfdffd78036 = L.circle(
+                [-8.072162108999976, -75.61701757899993],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_516456bf2f0b6f458ee07834864f65f2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_776e503d3b53d66d095caef02e5cbe51 = $(`<div id="html_776e503d3b53d66d095caef02e5cbe51" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (mín #1):</b> 121568<br><b>Hospitales ≤ 10.0 km:</b> 0</div>`)[0];
+                popup_516456bf2f0b6f458ee07834864f65f2.setContent(html_776e503d3b53d66d095caef02e5cbe51);
+            
+        
+
+        circle_045eb8b6dc15c8be76dd8cfdffd78036.bindPopup(popup_516456bf2f0b6f458ee07834864f65f2)
+        ;
+
+        
+    
+    
+            circle_045eb8b6dc15c8be76dd8cfdffd78036.bindTooltip(
+                `<div>
+                     Centro poblado: 121568 — 0 hosp ≤ 10.0 km (mín #1)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_e5f7a1edfca1aace28be83d08ba1f703 = L.circle(
+                [-8.004689452999969, -74.87171289099996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_5b534483bf5558dd70ed8925fd83b933 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8d73a8adbff85a2c4675e842514488e5 = $(`<div id="html_8d73a8adbff85a2c4675e842514488e5" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (mín #2):</b> 121569<br><b>Hospitales ≤ 10.0 km:</b> 0</div>`)[0];
+                popup_5b534483bf5558dd70ed8925fd83b933.setContent(html_8d73a8adbff85a2c4675e842514488e5);
+            
+        
+
+        circle_e5f7a1edfca1aace28be83d08ba1f703.bindPopup(popup_5b534483bf5558dd70ed8925fd83b933)
+        ;
+
+        
+    
+    
+            circle_e5f7a1edfca1aace28be83d08ba1f703.bindTooltip(
+                `<div>
+                     Centro poblado: 121569 — 0 hosp ≤ 10.0 km (mín #2)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_e887f44caa25fe1b569306cd092a3434 = L.circle(
+                [-8.00246993199994, -74.78465829599998],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_b2abb7b4f84ef95446bed16b85be7e77 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_80eabcd055251a03bab44780746f6fb3 = $(`<div id="html_80eabcd055251a03bab44780746f6fb3" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (mín #3):</b> 121570<br><b>Hospitales ≤ 10.0 km:</b> 0</div>`)[0];
+                popup_b2abb7b4f84ef95446bed16b85be7e77.setContent(html_80eabcd055251a03bab44780746f6fb3);
+            
+        
+
+        circle_e887f44caa25fe1b569306cd092a3434.bindPopup(popup_b2abb7b4f84ef95446bed16b85be7e77)
+        ;
+
+        
+    
+    
+            circle_e887f44caa25fe1b569306cd092a3434.bindTooltip(
+                `<div>
+                     Centro poblado: 121570 — 0 hosp ≤ 10.0 km (mín #3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_eb89a26e1e9947e356cd948cafa7d126 = L.circle(
+                [-3.749269530999925, -73.25946288999995],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_cbf4bffdde7172c52a1dd82f1b4030bd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_360877f271de45f6af850cfd8e023968 = $(`<div id="html_360877f271de45f6af850cfd8e023968" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (máx #1):</b> 123137<br><b>Hospitales ≤ 10.0 km:</b> 3</div>`)[0];
+                popup_cbf4bffdde7172c52a1dd82f1b4030bd.setContent(html_360877f271de45f6af850cfd8e023968);
+            
+        
+
+        circle_eb89a26e1e9947e356cd948cafa7d126.bindPopup(popup_cbf4bffdde7172c52a1dd82f1b4030bd)
+        ;
+
+        
+    
+    
+            circle_eb89a26e1e9947e356cd948cafa7d126.bindTooltip(
+                `<div>
+                     Centro poblado: 123137 — 3 hosp ≤ 10.0 km (máx #1)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_af80713ffb5b5ec67ca1db52dfc8eebf = L.circle(
+                [-3.718891090999932, -73.28376734299997],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_1131f40694778f7703284d35c6dd0f45 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9cfb73e4d553d626f897de28ebe0f825 = $(`<div id="html_9cfb73e4d553d626f897de28ebe0f825" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (máx #2):</b> 123138<br><b>Hospitales ≤ 10.0 km:</b> 3</div>`)[0];
+                popup_1131f40694778f7703284d35c6dd0f45.setContent(html_9cfb73e4d553d626f897de28ebe0f825);
+            
+        
+
+        circle_af80713ffb5b5ec67ca1db52dfc8eebf.bindPopup(popup_1131f40694778f7703284d35c6dd0f45)
+        ;
+
+        
+    
+    
+            circle_af80713ffb5b5ec67ca1db52dfc8eebf.bindTooltip(
+                `<div>
+                     Centro poblado: 123138 — 3 hosp ≤ 10.0 km (máx #2)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_37909d2cd5d695906ded5f1a2f9ba5d3 = L.circle(
+                [-3.7321699219999687, -73.29582031299998],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_8172198827707e6b8bd91bc3b45f5065 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7a32293b4185eda523b20f7b80f0583c = $(`<div id="html_7a32293b4185eda523b20f7b80f0583c" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (máx #3):</b> 123139<br><b>Hospitales ≤ 10.0 km:</b> 3</div>`)[0];
+                popup_8172198827707e6b8bd91bc3b45f5065.setContent(html_7a32293b4185eda523b20f7b80f0583c);
+            
+        
+
+        circle_37909d2cd5d695906ded5f1a2f9ba5d3.bindPopup(popup_8172198827707e6b8bd91bc3b45f5065)
+        ;
+
+        
+    
+    
+            circle_37909d2cd5d695906ded5f1a2f9ba5d3.bindTooltip(
+                `<div>
+                     Centro poblado: 123139 — 3 hosp ≤ 10.0 km (máx #3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75411512108b4258adfa21404e3d7522 = L.circleMarker(
+                [-3.762818, -73.253653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_1a614a3178412a30c55f8b19dccc8f8c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_56ba59126cadf7ad7331eb01051ab102 = $(`<div id="html_56ba59126cadf7ad7331eb01051ab102" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"</div>`)[0];
+                popup_1a614a3178412a30c55f8b19dccc8f8c.setContent(html_56ba59126cadf7ad7331eb01051ab102);
+            
+        
+
+        circle_marker_75411512108b4258adfa21404e3d7522.bindPopup(popup_1a614a3178412a30c55f8b19dccc8f8c)
+        ;
+
+        
+    
+    
+            circle_marker_75411512108b4258adfa21404e3d7522.bindTooltip(
+                `<div>
+                     HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_353e22d738692645d335cea89a0b9a41 = L.circleMarker(
+                [-3.7188408, -73.2439423],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_42e360d3ac5fb43aa1bb7f705330fc1a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2bf306b9b064008d9f392534822f6e4a = $(`<div id="html_2bf306b9b064008d9f392534822f6e4a" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL III IQUITOS</div>`)[0];
+                popup_42e360d3ac5fb43aa1bb7f705330fc1a.setContent(html_2bf306b9b064008d9f392534822f6e4a);
+            
+        
+
+        circle_marker_353e22d738692645d335cea89a0b9a41.bindPopup(popup_42e360d3ac5fb43aa1bb7f705330fc1a)
+        ;
+
+        
+    
+    
+            circle_marker_353e22d738692645d335cea89a0b9a41.bindTooltip(
+                `<div>
+                     HOSPITAL III IQUITOS
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_168fae880c5215fc675b1b7a75c3883e = L.circleMarker(
+                [-3.72696048, -73.25341698],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_f3fcee6ca6689a1c4f5f10059582c590 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_45b882462fa3a9fe8ad10991d4b58e60 = $(`<div id="html_45b882462fa3a9fe8ad10991d4b58e60" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"</div>`)[0];
+                popup_f3fcee6ca6689a1c4f5f10059582c590.setContent(html_45b882462fa3a9fe8ad10991d4b58e60);
+            
+        
+
+        circle_marker_168fae880c5215fc675b1b7a75c3883e.bindPopup(popup_f3fcee6ca6689a1c4f5f10059582c590)
+        ;
+
+        
+    
+    
+            circle_marker_168fae880c5215fc675b1b7a75c3883e.bindTooltip(
+                `<div>
+                     HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dadeb83d449c83472b8c8605d62b13db = L.circleMarker(
+                [-3.762818, -73.253653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_a576962a70473914e3d2a481f626c40d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_429fa28d5c04c9e08349b8559858006d = $(`<div id="html_429fa28d5c04c9e08349b8559858006d" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"</div>`)[0];
+                popup_a576962a70473914e3d2a481f626c40d.setContent(html_429fa28d5c04c9e08349b8559858006d);
+            
+        
+
+        circle_marker_dadeb83d449c83472b8c8605d62b13db.bindPopup(popup_a576962a70473914e3d2a481f626c40d)
+        ;
+
+        
+    
+    
+            circle_marker_dadeb83d449c83472b8c8605d62b13db.bindTooltip(
+                `<div>
+                     HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8dd1fcb60b91b27775aeed7c26210375 = L.circleMarker(
+                [-3.7188408, -73.2439423],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_267681e00fa43465debcb71a4d71c706 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d3a991fd4e4c67bb08f69d684de9ce2c = $(`<div id="html_d3a991fd4e4c67bb08f69d684de9ce2c" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL III IQUITOS</div>`)[0];
+                popup_267681e00fa43465debcb71a4d71c706.setContent(html_d3a991fd4e4c67bb08f69d684de9ce2c);
+            
+        
+
+        circle_marker_8dd1fcb60b91b27775aeed7c26210375.bindPopup(popup_267681e00fa43465debcb71a4d71c706)
+        ;
+
+        
+    
+    
+            circle_marker_8dd1fcb60b91b27775aeed7c26210375.bindTooltip(
+                `<div>
+                     HOSPITAL III IQUITOS
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfc1ceebd4fd1b0a29ac881859b6ab3d = L.circleMarker(
+                [-3.72696048, -73.25341698],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_e59176de52513aedd23e7f55055c2f87 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c5f757cd647803deb8f94ea0e3278377 = $(`<div id="html_c5f757cd647803deb8f94ea0e3278377" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"</div>`)[0];
+                popup_e59176de52513aedd23e7f55055c2f87.setContent(html_c5f757cd647803deb8f94ea0e3278377);
+            
+        
+
+        circle_marker_dfc1ceebd4fd1b0a29ac881859b6ab3d.bindPopup(popup_e59176de52513aedd23e7f55055c2f87)
+        ;
+
+        
+    
+    
+            circle_marker_dfc1ceebd4fd1b0a29ac881859b6ab3d.bindTooltip(
+                `<div>
+                     HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c297a58ac95be71e816adae88428cbd = L.circleMarker(
+                [-3.762818, -73.253653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_dc3584205f7b6a598cb4818f7bfb99a1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a6f8e2565e5ba87e0cc77dfade149c12 = $(`<div id="html_a6f8e2565e5ba87e0cc77dfade149c12" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"</div>`)[0];
+                popup_dc3584205f7b6a598cb4818f7bfb99a1.setContent(html_a6f8e2565e5ba87e0cc77dfade149c12);
+            
+        
+
+        circle_marker_7c297a58ac95be71e816adae88428cbd.bindPopup(popup_dc3584205f7b6a598cb4818f7bfb99a1)
+        ;
+
+        
+    
+    
+            circle_marker_7c297a58ac95be71e816adae88428cbd.bindTooltip(
+                `<div>
+                     HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_86c47b12cec929a76303c6ceb900534a = L.circleMarker(
+                [-3.7188408, -73.2439423],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_75de112bfbecda96f16fe56e91f12967 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6fbc5d67c519379a8734c3be7c035f4f = $(`<div id="html_6fbc5d67c519379a8734c3be7c035f4f" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL III IQUITOS</div>`)[0];
+                popup_75de112bfbecda96f16fe56e91f12967.setContent(html_6fbc5d67c519379a8734c3be7c035f4f);
+            
+        
+
+        circle_marker_86c47b12cec929a76303c6ceb900534a.bindPopup(popup_75de112bfbecda96f16fe56e91f12967)
+        ;
+
+        
+    
+    
+            circle_marker_86c47b12cec929a76303c6ceb900534a.bindTooltip(
+                `<div>
+                     HOSPITAL III IQUITOS
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_603df3e68180d2b1f1fbf6bd676708b9 = L.circleMarker(
+                [-3.72696048, -73.25341698],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+        
+    
+        var popup_8b1f5949dea18d1309547ee1487fe264 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cd12455e5fe1da1a30fc57643a9c03e4 = $(`<div id="html_cd12455e5fe1da1a30fc57643a9c03e4" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"</div>`)[0];
+                popup_8b1f5949dea18d1309547ee1487fe264.setContent(html_cd12455e5fe1da1a30fc57643a9c03e4);
+            
+        
+
+        circle_marker_603df3e68180d2b1f1fbf6bd676708b9.bindPopup(popup_8b1f5949dea18d1309547ee1487fe264)
+        ;
+
+        
+    
+    
+            circle_marker_603df3e68180d2b1f1fbf6bd676708b9.bindTooltip(
+                `<div>
+                     HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_4ebbd31faf38c9a49e52aaef148ccda2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_8550bed0436cb1da7fed5f59787a50a5 = L.circleMarker(
+                [-5.89606, -76.11616333],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ebbd31faf38c9a49e52aaef148ccda2);
+        
+    
+            circle_marker_8550bed0436cb1da7fed5f59787a50a5.bindTooltip(
+                `<div>
+                     HOSPITAL I YURIMAGUAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ce28e622a9025e871d89e96751466c4 = L.circleMarker(
+                [-3.762818, -73.253653],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ebbd31faf38c9a49e52aaef148ccda2);
+        
+    
+            circle_marker_8ce28e622a9025e871d89e96751466c4.bindTooltip(
+                `<div>
+                     HOSPITAL IQUITOS "CESAR GARAYAR GARCIA"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e05c68e19e13da2d73c76316c7479361 = L.circleMarker(
+                [-3.90854887, -70.51701259],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ebbd31faf38c9a49e52aaef148ccda2);
+        
+    
+            circle_marker_e05c68e19e13da2d73c76316c7479361.bindTooltip(
+                `<div>
+                     CENTRO DE ATENCION PRIMARIA II CABALLOCOCHA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1240db3dd41fbafc6cda1ffde72ac72a = L.circleMarker(
+                [-3.7188408, -73.2439423],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ebbd31faf38c9a49e52aaef148ccda2);
+        
+    
+            circle_marker_1240db3dd41fbafc6cda1ffde72ac72a.bindTooltip(
+                `<div>
+                     HOSPITAL III IQUITOS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae8f351cd4005d207444a7a07da27d4c = L.circleMarker(
+                [-3.72696048, -73.25341698],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ebbd31faf38c9a49e52aaef148ccda2);
+        
+    
+            circle_marker_ae8f351cd4005d207444a7a07da27d4c.bindTooltip(
+                `<div>
+                     HOSPITAL REGIONAL DE LORETO "FELIPE SANTIAGO ARRIOLA IGLESIAS"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0977c6cd003a953bfa4babccef07eb2b = L.circleMarker(
+                [-5.89353, -76.10645167],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ebbd31faf38c9a49e52aaef148ccda2);
+        
+    
+            circle_marker_0977c6cd003a953bfa4babccef07eb2b.bindTooltip(
+                `<div>
+                     HOSPITAL SANTA GEMA DE  YURIMAGUAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_b3793da5a0c004ec98e62a4ce5b1e5c3_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_a48f3dc5aa2b472d32d727259c9eb721,
+                },
+                overlays :  {
+                    "Hospitales en LORETO (contexto)" : feature_group_4ebbd31faf38c9a49e52aaef148ccda2,
+                },
+            };
+            let layer_control_b3793da5a0c004ec98e62a4ce5b1e5c3 = L.control.layers(
+                layer_control_b3793da5a0c004ec98e62a4ce5b1e5c3_layers.base_layers,
+                layer_control_b3793da5a0c004ec98e62a4ce5b1e5c3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_2537b557bf80fe1567fb0ec1764ec00a);
+
+        
+</script>
+</html>
