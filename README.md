@@ -108,6 +108,7 @@ python 1.4.proximity_analysis.py
 Performs 10km buffer analysis around population centers to identify areas with limited hospital access.
 
 ### Step 5: Interactive Maps
+Running 2.1.folium_interactive.py IS MANDATORY as far the output was not uploaded to GitHub due to size constrains. 
 ```bash
 python 2.1.folium_interactive.py
 python 2.2.proximity_lim_loreto.py
