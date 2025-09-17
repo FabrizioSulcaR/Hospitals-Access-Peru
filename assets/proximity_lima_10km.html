@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_77fe4f52059e33e52bfcc1be2cd6e308 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_77fe4f52059e33e52bfcc1be2cd6e308" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_77fe4f52059e33e52bfcc1be2cd6e308 = L.map(
+                "map_77fe4f52059e33e52bfcc1be2cd6e308",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 1,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d622cb6142cd2dbce120546f3c44abc9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d622cb6142cd2dbce120546f3c44abc9.addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+            map_77fe4f52059e33e52bfcc1be2cd6e308.fitBounds(
+                [[-13.323513730999935, -77.88659211099997], [-10.274185602999921, -75.50749998499992]],
+                {}
+            );
+        
+    
+            var circle_ff59c8d9903da1cfc04d5faf62dd8b5c = L.circle(
+                [-13.173256806999973, -76.12406932599998],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_baf3c00383fa35cb5ee51c5b4db6cd4b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5a6b0a8a49bb35a76f0335417fa076b9 = $(`<div id="html_5a6b0a8a49bb35a76f0335417fa076b9" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (mín #1):</b> 11478<br><b>Hospitales ≤ 10.0 km:</b> 0</div>`)[0];
+                popup_baf3c00383fa35cb5ee51c5b4db6cd4b.setContent(html_5a6b0a8a49bb35a76f0335417fa076b9);
+            
+        
+
+        circle_ff59c8d9903da1cfc04d5faf62dd8b5c.bindPopup(popup_baf3c00383fa35cb5ee51c5b4db6cd4b)
+        ;
+
+        
+    
+    
+            circle_ff59c8d9903da1cfc04d5faf62dd8b5c.bindTooltip(
+                `<div>
+                     Centro poblado: 11478 — 0 hosp ≤ 10.0 km (mín #1)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_64f490dfb663f05b5f3cd6d785b0fb50 = L.circle(
+                [-10.492511718999936, -77.16132421899994],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_c1d36478ff916a8473bd17fa9822dab1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_27929fdc724caac65a7346f479b1d855 = $(`<div id="html_27929fdc724caac65a7346f479b1d855" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (mín #2):</b> 78891<br><b>Hospitales ≤ 10.0 km:</b> 0</div>`)[0];
+                popup_c1d36478ff916a8473bd17fa9822dab1.setContent(html_27929fdc724caac65a7346f479b1d855);
+            
+        
+
+        circle_64f490dfb663f05b5f3cd6d785b0fb50.bindPopup(popup_c1d36478ff916a8473bd17fa9822dab1)
+        ;
+
+        
+    
+    
+            circle_64f490dfb663f05b5f3cd6d785b0fb50.bindTooltip(
+                `<div>
+                     Centro poblado: 78891 — 0 hosp ≤ 10.0 km (mín #2)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_78365f332bc18aa4c89699e1104af0c5 = L.circle(
+                [-10.463429686999973, -77.10136523399996],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_94e3f26d9ea1f64f157fb4e93eec1ef1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_570ff95b875f70f0eec493091b22456a = $(`<div id="html_570ff95b875f70f0eec493091b22456a" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (mín #3):</b> 78892<br><b>Hospitales ≤ 10.0 km:</b> 0</div>`)[0];
+                popup_94e3f26d9ea1f64f157fb4e93eec1ef1.setContent(html_570ff95b875f70f0eec493091b22456a);
+            
+        
+
+        circle_78365f332bc18aa4c89699e1104af0c5.bindPopup(popup_94e3f26d9ea1f64f157fb4e93eec1ef1)
+        ;
+
+        
+    
+    
+            circle_78365f332bc18aa4c89699e1104af0c5.bindTooltip(
+                `<div>
+                     Centro poblado: 78892 — 0 hosp ≤ 10.0 km (mín #3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_a43e822b7cf190b9071437b4e21b0448 = L.circle(
+                [-12.051530214999957, -77.03187863799997],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.9, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_918f50d01dddf8f9a18c07dbb69c55af = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4c75e3f86a51f8127ac4ac1538e4b6a0 = $(`<div id="html_4c75e3f86a51f8127ac4ac1538e4b6a0" style="width: 100.0%; height: 100.0%;"><b>Centro poblado (máx #1):</b> 118062<br><b>Hospitales ≤ 10.0 km:</b> 26</div>`)[0];
+                popup_918f50d01dddf8f9a18c07dbb69c55af.setContent(html_4c75e3f86a51f8127ac4ac1538e4b6a0);
+            
+        
+
+        circle_a43e822b7cf190b9071437b4e21b0448.bindPopup(popup_918f50d01dddf8f9a18c07dbb69c55af)
+        ;
+
+        
+    
+    
+            circle_a43e822b7cf190b9071437b4e21b0448.bindTooltip(
+                `<div>
+                     Centro poblado: 118062 — 26 hosp ≤ 10.0 km (máx #1)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7948e253657c0b9e3ed48b1f9a95d9e = L.circleMarker(
+                [-12.0157493, -77.0979946],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_1690b61b21cc4ad8528784118f8f0530 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5845551b3dd49a119206d59f68215073 = $(`<div id="html_5845551b3dd49a119206d59f68215073" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> COMPLEJO ASISTENCIAL LUIS NEGREIROS VEGA</div>`)[0];
+                popup_1690b61b21cc4ad8528784118f8f0530.setContent(html_5845551b3dd49a119206d59f68215073);
+            
+        
+
+        circle_marker_c7948e253657c0b9e3ed48b1f9a95d9e.bindPopup(popup_1690b61b21cc4ad8528784118f8f0530)
+        ;
+
+        
+    
+    
+            circle_marker_c7948e253657c0b9e3ed48b1f9a95d9e.bindTooltip(
+                `<div>
+                     COMPLEJO ASISTENCIAL LUIS NEGREIROS VEGA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_696de26ebfce110a022a97edf3f9781c = L.circleMarker(
+                [-11.97723, -77.0656159],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_f47c43ea03a1a9f2902b87a5a4521e1f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_648306432b9f0561701eedb3d2feb089 = $(`<div id="html_648306432b9f0561701eedb3d2feb089" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL MUNICIPAL LOS OLIVOS</div>`)[0];
+                popup_f47c43ea03a1a9f2902b87a5a4521e1f.setContent(html_648306432b9f0561701eedb3d2feb089);
+            
+        
+
+        circle_marker_696de26ebfce110a022a97edf3f9781c.bindPopup(popup_f47c43ea03a1a9f2902b87a5a4521e1f)
+        ;
+
+        
+    
+    
+            circle_marker_696de26ebfce110a022a97edf3f9781c.bindTooltip(
+                `<div>
+                     HOSPITAL MUNICIPAL LOS OLIVOS
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e8e722966e17a8695fc13ce2591dbd7 = L.circleMarker(
+                [-12.0871197, -77.0619786],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_7e020283aff660172324f9de2e4fdc2a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_20225260d206123346ad9be1e466091a = $(`<div id="html_20225260d206123346ad9be1e466091a" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> LUIS ARIAS SCHEREIBER - HOSPITAL MILITAR CENTRAL</div>`)[0];
+                popup_7e020283aff660172324f9de2e4fdc2a.setContent(html_20225260d206123346ad9be1e466091a);
+            
+        
+
+        circle_marker_0e8e722966e17a8695fc13ce2591dbd7.bindPopup(popup_7e020283aff660172324f9de2e4fdc2a)
+        ;
+
+        
+    
+    
+            circle_marker_0e8e722966e17a8695fc13ce2591dbd7.bindTooltip(
+                `<div>
+                     LUIS ARIAS SCHEREIBER - HOSPITAL MILITAR CENTRAL
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_003aa9470ae6f5943f863726369d27a7 = L.circleMarker(
+                [-12.04757833, -76.947995],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_5ec25079036596463be1aec8ef64c0a2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ba22249dcfb2aa9407fd410577baaf97 = $(`<div id="html_ba22249dcfb2aa9407fd410577baaf97" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> SEGURO SOCIAL DE SALUD - ESSALUD</div>`)[0];
+                popup_5ec25079036596463be1aec8ef64c0a2.setContent(html_ba22249dcfb2aa9407fd410577baaf97);
+            
+        
+
+        circle_marker_003aa9470ae6f5943f863726369d27a7.bindPopup(popup_5ec25079036596463be1aec8ef64c0a2)
+        ;
+
+        
+    
+    
+            circle_marker_003aa9470ae6f5943f863726369d27a7.bindTooltip(
+                `<div>
+                     SEGURO SOCIAL DE SALUD - ESSALUD
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51d36f115f9d7b002f6a55e0502a57f6 = L.circleMarker(
+                [-12.0639353, -77.1214128],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_a158bd2e57152c7ebd3190651bffd77e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_55a39eb5a582b430134acb7c918564b4 = $(`<div id="html_55a39eb5a582b430134acb7c918564b4" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL NACIONAL ALBERTO SABOGAL SOLOGUREN DE LA RED ASISTENCIAL SABOGAL</div>`)[0];
+                popup_a158bd2e57152c7ebd3190651bffd77e.setContent(html_55a39eb5a582b430134acb7c918564b4);
+            
+        
+
+        circle_marker_51d36f115f9d7b002f6a55e0502a57f6.bindPopup(popup_a158bd2e57152c7ebd3190651bffd77e)
+        ;
+
+        
+    
+    
+            circle_marker_51d36f115f9d7b002f6a55e0502a57f6.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL ALBERTO SABOGAL SOLOGUREN DE LA RED ASISTENCIAL SABOGAL
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_822e8d7a1c8d0aa7ff448a7f88217bd0 = L.circleMarker(
+                [-12.0443408, -77.0440331],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_5828490df84c06cfd8d04952df5f4790 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8a40d7c3676cb482e384ce18cd09abb5 = $(`<div id="html_8a40d7c3676cb482e384ce18cd09abb5" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL II RAM�N CASTILLA</div>`)[0];
+                popup_5828490df84c06cfd8d04952df5f4790.setContent(html_8a40d7c3676cb482e384ce18cd09abb5);
+            
+        
+
+        circle_marker_822e8d7a1c8d0aa7ff448a7f88217bd0.bindPopup(popup_5828490df84c06cfd8d04952df5f4790)
+        ;
+
+        
+    
+    
+            circle_marker_822e8d7a1c8d0aa7ff448a7f88217bd0.bindTooltip(
+                `<div>
+                     HOSPITAL II RAM�N CASTILLA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0819ec6beead1dc8f20582c703e55707 = L.circleMarker(
+                [-12.0589571, -77.0312779],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_3acd7974e0dcd901c32b81d80f8d1157 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6d55a41ac2249c9986ba457c483e21cf = $(`<div id="html_6d55a41ac2249c9986ba457c483e21cf" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL III EMERGENCIAS GRAU</div>`)[0];
+                popup_3acd7974e0dcd901c32b81d80f8d1157.setContent(html_6d55a41ac2249c9986ba457c483e21cf);
+            
+        
+
+        circle_marker_0819ec6beead1dc8f20582c703e55707.bindPopup(popup_3acd7974e0dcd901c32b81d80f8d1157)
+        ;
+
+        
+    
+    
+            circle_marker_0819ec6beead1dc8f20582c703e55707.bindTooltip(
+                `<div>
+                     HOSPITAL III EMERGENCIAS GRAU
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cd2ccf10f8973b02602832362129e82 = L.circleMarker(
+                [-12.0571705, -77.0162686],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_8b67009a459c6323b6dd32c9d6008c87 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_26c2d73bc56cf8b94d216c847d3d2273 = $(`<div id="html_26c2d73bc56cf8b94d216c847d3d2273" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> NACIONAL  DOS DE MAYO</div>`)[0];
+                popup_8b67009a459c6323b6dd32c9d6008c87.setContent(html_26c2d73bc56cf8b94d216c847d3d2273);
+            
+        
+
+        circle_marker_1cd2ccf10f8973b02602832362129e82.bindPopup(popup_8b67009a459c6323b6dd32c9d6008c87)
+        ;
+
+        
+    
+    
+            circle_marker_1cd2ccf10f8973b02602832362129e82.bindTooltip(
+                `<div>
+                     NACIONAL  DOS DE MAYO
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_909b27523f256c5a5490a76b34227625 = L.circleMarker(
+                [-12.062131, -76.9455439],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_25ab6cb4fe0aab3e416732aa146f31b5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fc2b18c7009d36be0e0e2e023797d490 = $(`<div id="html_fc2b18c7009d36be0e0e2e023797d490" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL I CARLOS ALCANTARA BUTTERFIELD</div>`)[0];
+                popup_25ab6cb4fe0aab3e416732aa146f31b5.setContent(html_fc2b18c7009d36be0e0e2e023797d490);
+            
+        
+
+        circle_marker_909b27523f256c5a5490a76b34227625.bindPopup(popup_25ab6cb4fe0aab3e416732aa146f31b5)
+        ;
+
+        
+    
+    
+            circle_marker_909b27523f256c5a5490a76b34227625.bindTooltip(
+                `<div>
+                     HOSPITAL I CARLOS ALCANTARA BUTTERFIELD
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40b0fc82a6c69ea306c9fb9e4fd047db = L.circleMarker(
+                [-12.098705, -77.065756],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_9e324d735ce89fd21126a84318df8411 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_129e44c2a287638fb1c12aa1bd719725 = $(`<div id="html_129e44c2a287638fb1c12aa1bd719725" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL VICTOR LARCO HERRERA</div>`)[0];
+                popup_9e324d735ce89fd21126a84318df8411.setContent(html_129e44c2a287638fb1c12aa1bd719725);
+            
+        
+
+        circle_marker_40b0fc82a6c69ea306c9fb9e4fd047db.bindPopup(popup_9e324d735ce89fd21126a84318df8411)
+        ;
+
+        
+    
+    
+            circle_marker_40b0fc82a6c69ea306c9fb9e4fd047db.bindTooltip(
+                `<div>
+                     HOSPITAL VICTOR LARCO HERRERA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66465f4598b911097454d4c91b2d155a = L.circleMarker(
+                [-12.0498454, -77.0425597],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_72d42fd4d860d9c7ac57bdf76ed6ed88 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f2e7f89c51c86bb035cab8f6f601c1c7 = $(`<div id="html_f2e7f89c51c86bb035cab8f6f601c1c7" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> NACIONAL ARZOBISPO LOAYZA</div>`)[0];
+                popup_72d42fd4d860d9c7ac57bdf76ed6ed88.setContent(html_f2e7f89c51c86bb035cab8f6f601c1c7);
+            
+        
+
+        circle_marker_66465f4598b911097454d4c91b2d155a.bindPopup(popup_72d42fd4d860d9c7ac57bdf76ed6ed88)
+        ;
+
+        
+    
+    
+            circle_marker_66465f4598b911097454d4c91b2d155a.bindTooltip(
+                `<div>
+                     NACIONAL ARZOBISPO LOAYZA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96b18d3921db6ae545ae56badf9ccc78 = L.circleMarker(
+                [-12.1136234, -77.0279933],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_d6ca043af154f9b1f7d87a5df3e21d1b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7036b34920902cffd0d04214bb45d4f6 = $(`<div id="html_7036b34920902cffd0d04214bb45d4f6" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> ESSALUD - HOSPITAL II SU�REZ ANGAMOS</div>`)[0];
+                popup_d6ca043af154f9b1f7d87a5df3e21d1b.setContent(html_7036b34920902cffd0d04214bb45d4f6);
+            
+        
+
+        circle_marker_96b18d3921db6ae545ae56badf9ccc78.bindPopup(popup_d6ca043af154f9b1f7d87a5df3e21d1b)
+        ;
+
+        
+    
+    
+            circle_marker_96b18d3921db6ae545ae56badf9ccc78.bindTooltip(
+                `<div>
+                     ESSALUD - HOSPITAL II SU�REZ ANGAMOS
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9b4339d42e47004199778011e107795 = L.circleMarker(
+                [-12.04273444, -77.09846168],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_890038a51bafbb6a82833b247c5c3ab9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4a64134017ad9b6c444a781590b09a97 = $(`<div id="html_4a64134017ad9b6c444a781590b09a97" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL SAN JOSE</div>`)[0];
+                popup_890038a51bafbb6a82833b247c5c3ab9.setContent(html_4a64134017ad9b6c444a781590b09a97);
+            
+        
+
+        circle_marker_a9b4339d42e47004199778011e107795.bindPopup(popup_890038a51bafbb6a82833b247c5c3ab9)
+        ;
+
+        
+    
+    
+            circle_marker_a9b4339d42e47004199778011e107795.bindTooltip(
+                `<div>
+                     HOSPITAL SAN JOSE
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b4b1eb0f9fc00ad7e57c9a09eff474cb = L.circleMarker(
+                [-12.0617901, -77.0901374],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_8919cb729de906ae729950dd18278959 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2bf83b131565cca8543c1efc0d3b6359 = $(`<div id="html_2bf83b131565cca8543c1efc0d3b6359" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> CENTRO MEDICO NAVAL CIRUJANO MAYOR SANTIAGO TAVARA</div>`)[0];
+                popup_8919cb729de906ae729950dd18278959.setContent(html_2bf83b131565cca8543c1efc0d3b6359);
+            
+        
+
+        circle_marker_b4b1eb0f9fc00ad7e57c9a09eff474cb.bindPopup(popup_8919cb729de906ae729950dd18278959)
+        ;
+
+        
+    
+    
+            circle_marker_b4b1eb0f9fc00ad7e57c9a09eff474cb.bindTooltip(
+                `<div>
+                     CENTRO MEDICO NAVAL CIRUJANO MAYOR SANTIAGO TAVARA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd909a166776d78564e7723f845a0e97 = L.circleMarker(
+                [-12.10342333, -77.029825],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_bf3bd2faf7dad8965fb12dc84e22dcff = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b694e03cf1e8f7a5ec17d6065ea298a5 = $(`<div id="html_b694e03cf1e8f7a5ec17d6065ea298a5" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> FUERZA AEREA DEL PERU</div>`)[0];
+                popup_bf3bd2faf7dad8965fb12dc84e22dcff.setContent(html_b694e03cf1e8f7a5ec17d6065ea298a5);
+            
+        
+
+        circle_marker_cd909a166776d78564e7723f845a0e97.bindPopup(popup_bf3bd2faf7dad8965fb12dc84e22dcff)
+        ;
+
+        
+    
+    
+            circle_marker_cd909a166776d78564e7723f845a0e97.bindTooltip(
+                `<div>
+                     FUERZA AEREA DEL PERU
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a1ca55b19d7d84141a345c90d738760 = L.circleMarker(
+                [-12.0399743, -76.9935755],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_2d0f1237ce59483209cdfbb20beef697 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b25b7976678fb391e56c56d2bd547af7 = $(`<div id="html_b25b7976678fb391e56c56d2bd547af7" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL NACIONAL HIPOLITO UNANUE</div>`)[0];
+                popup_2d0f1237ce59483209cdfbb20beef697.setContent(html_b25b7976678fb391e56c56d2bd547af7);
+            
+        
+
+        circle_marker_7a1ca55b19d7d84141a345c90d738760.bindPopup(popup_2d0f1237ce59483209cdfbb20beef697)
+        ;
+
+        
+    
+    
+            circle_marker_7a1ca55b19d7d84141a345c90d738760.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL HIPOLITO UNANUE
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a22d9b9370ee61675702a5142ae9a64 = L.circleMarker(
+                [-12.0468271, -76.9454975],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_acc51070307c389828e24ba6b4bc63fe = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2007bf8eb33d81b6411523cff0a68c2f = $(`<div id="html_2007bf8eb33d81b6411523cff0a68c2f" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL HERMILIO VALDIZAN</div>`)[0];
+                popup_acc51070307c389828e24ba6b4bc63fe.setContent(html_2007bf8eb33d81b6411523cff0a68c2f);
+            
+        
+
+        circle_marker_8a22d9b9370ee61675702a5142ae9a64.bindPopup(popup_acc51070307c389828e24ba6b4bc63fe)
+        ;
+
+        
+    
+    
+            circle_marker_8a22d9b9370ee61675702a5142ae9a64.bindTooltip(
+                `<div>
+                     HOSPITAL HERMILIO VALDIZAN
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3cc2bd6f056dbeb51183d8ae3836ba7d = L.circleMarker(
+                [-12.0659612, -77.0945832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_b1f6e706f7c538bd0fa90890d64ba98b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c2551935b449b08d25798556089894eb = $(`<div id="html_c2551935b449b08d25798556089894eb" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL I OCTAVIO MONGRUT MU�OZ</div>`)[0];
+                popup_b1f6e706f7c538bd0fa90890d64ba98b.setContent(html_c2551935b449b08d25798556089894eb);
+            
+        
+
+        circle_marker_3cc2bd6f056dbeb51183d8ae3836ba7d.bindPopup(popup_b1f6e706f7c538bd0fa90890d64ba98b)
+        ;
+
+        
+    
+    
+            circle_marker_3cc2bd6f056dbeb51183d8ae3836ba7d.bindTooltip(
+                `<div>
+                     HOSPITAL I OCTAVIO MONGRUT MU�OZ
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6606269a969a826409be9b4dfc331f2d = L.circleMarker(
+                [-11.9665774, -77.0030573],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_9c2f69bfd5ffd76f50d3efa3b64302a3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d1b7a2e7d49a3cfb9837e3b23cce52cf = $(`<div id="html_d1b7a2e7d49a3cfb9837e3b23cce52cf" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL SAN JUAN DE LURIGANCHO</div>`)[0];
+                popup_9c2f69bfd5ffd76f50d3efa3b64302a3.setContent(html_d1b7a2e7d49a3cfb9837e3b23cce52cf);
+            
+        
+
+        circle_marker_6606269a969a826409be9b4dfc331f2d.bindPopup(popup_9c2f69bfd5ffd76f50d3efa3b64302a3)
+        ;
+
+        
+    
+    
+            circle_marker_6606269a969a826409be9b4dfc331f2d.bindTooltip(
+                `<div>
+                     HOSPITAL SAN JUAN DE LURIGANCHO
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a77b33a31fef5a79ae99dc2de217bf9c = L.circleMarker(
+                [-12.0839746, -77.0611078],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_73a8a1ba991777a397371bc19fb5fea9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f92533ec7448ad77b55d5d558bccb430 = $(`<div id="html_f92533ec7448ad77b55d5d558bccb430" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL NACIONAL POLICIA NACIONAL DEL PERU GRAL PNP LUIS N. SAENZ.</div>`)[0];
+                popup_73a8a1ba991777a397371bc19fb5fea9.setContent(html_f92533ec7448ad77b55d5d558bccb430);
+            
+        
+
+        circle_marker_a77b33a31fef5a79ae99dc2de217bf9c.bindPopup(popup_73a8a1ba991777a397371bc19fb5fea9)
+        ;
+
+        
+    
+    
+            circle_marker_a77b33a31fef5a79ae99dc2de217bf9c.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL POLICIA NACIONAL DEL PERU GRAL PNP LUIS N. SAENZ.
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f91f18e8b88f01df775b30690e0949d5 = L.circleMarker(
+                [-12.0581708, -77.0217293],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_6dd4bb0487bb6bc91707549d57d90aa8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2db3b7182be71d39d7f4ab8d285d9cfa = $(`<div id="html_2db3b7182be71d39d7f4ab8d285d9cfa" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL DE EMERGENCIAS PEDIATRICAS</div>`)[0];
+                popup_6dd4bb0487bb6bc91707549d57d90aa8.setContent(html_2db3b7182be71d39d7f4ab8d285d9cfa);
+            
+        
+
+        circle_marker_f91f18e8b88f01df775b30690e0949d5.bindPopup(popup_6dd4bb0487bb6bc91707549d57d90aa8)
+        ;
+
+        
+    
+    
+            circle_marker_f91f18e8b88f01df775b30690e0949d5.bindTooltip(
+                `<div>
+                     HOSPITAL DE EMERGENCIAS PEDIATRICAS
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25db802e72dad9cf8ac79371fb9a7161 = L.circleMarker(
+                [-12.0220216, -77.0544967],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_ee2afff8b00ebf191cbfba9ae47d4638 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8c8f7f546b9e7479edd25e8a0666f113 = $(`<div id="html_8c8f7f546b9e7479edd25e8a0666f113" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL NACIONAL CAYETANO HEREDIA</div>`)[0];
+                popup_ee2afff8b00ebf191cbfba9ae47d4638.setContent(html_8c8f7f546b9e7479edd25e8a0666f113);
+            
+        
+
+        circle_marker_25db802e72dad9cf8ac79371fb9a7161.bindPopup(popup_ee2afff8b00ebf191cbfba9ae47d4638)
+        ;
+
+        
+    
+    
+            circle_marker_25db802e72dad9cf8ac79371fb9a7161.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL CAYETANO HEREDIA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b4f4c692f5e531625089cc6a521be093 = L.circleMarker(
+                [-12.1282107, -77.0180619],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_efc7f575649d04434fc4851ae8bb7bf1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4a99270a7a83c0d7f643f0478da39dcf = $(`<div id="html_4a99270a7a83c0d7f643f0478da39dcf" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL DE EMERGENCIAS JOSE CASIMIRO ULLOA</div>`)[0];
+                popup_efc7f575649d04434fc4851ae8bb7bf1.setContent(html_4a99270a7a83c0d7f643f0478da39dcf);
+            
+        
+
+        circle_marker_b4f4c692f5e531625089cc6a521be093.bindPopup(popup_efc7f575649d04434fc4851ae8bb7bf1)
+        ;
+
+        
+    
+    
+            circle_marker_b4f4c692f5e531625089cc6a521be093.bindTooltip(
+                `<div>
+                     HOSPITAL DE EMERGENCIAS JOSE CASIMIRO ULLOA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05f85f9af3eb068406b68ff590cec769 = L.circleMarker(
+                [-12.0716016, -77.0610651],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_9d3b4598104094df9614eef4bbe90b27 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5ea2fc29c495b516935b5e5ba7e75555 = $(`<div id="html_5ea2fc29c495b516935b5e5ba7e75555" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL DE APOYO SANTA ROSA</div>`)[0];
+                popup_9d3b4598104094df9614eef4bbe90b27.setContent(html_5ea2fc29c495b516935b5e5ba7e75555);
+            
+        
+
+        circle_marker_05f85f9af3eb068406b68ff590cec769.bindPopup(popup_9d3b4598104094df9614eef4bbe90b27)
+        ;
+
+        
+    
+    
+            circle_marker_05f85f9af3eb068406b68ff590cec769.bindTooltip(
+                `<div>
+                     HOSPITAL DE APOYO SANTA ROSA
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_944fc815f9974884461a7fc1762587ea = L.circleMarker(
+                [-12.0499179, -77.0423608],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_d3cec9da467178f8dd8fbacc0b4916d0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e344fb28a6f186e76a2da52873f352ec = $(`<div id="html_e344fb28a6f186e76a2da52873f352ec" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> HOSPITAL NACIONAL DOCENTE MADRE NI�O SAN BARTOLOME</div>`)[0];
+                popup_d3cec9da467178f8dd8fbacc0b4916d0.setContent(html_e344fb28a6f186e76a2da52873f352ec);
+            
+        
+
+        circle_marker_944fc815f9974884461a7fc1762587ea.bindPopup(popup_d3cec9da467178f8dd8fbacc0b4916d0)
+        ;
+
+        
+    
+    
+            circle_marker_944fc815f9974884461a7fc1762587ea.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL DOCENTE MADRE NI�O SAN BARTOLOME
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_efeefd73aafcb46131aab9e5355732e9 = L.circleMarker(
+                [-12.0491962, -77.1076748],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+        
+    
+        var popup_73a4d477cae4e3c8cfc3b096247353a0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2130304bcb73d4507570f4d64b93757a = $(`<div id="html_2130304bcb73d4507570f4d64b93757a" style="width: 100.0%; height: 100.0%;"><b>Hospital:</b> ALBERTO LEOPOLDO BARTON THOMPSON</div>`)[0];
+                popup_73a4d477cae4e3c8cfc3b096247353a0.setContent(html_2130304bcb73d4507570f4d64b93757a);
+            
+        
+
+        circle_marker_efeefd73aafcb46131aab9e5355732e9.bindPopup(popup_73a4d477cae4e3c8cfc3b096247353a0)
+        ;
+
+        
+    
+    
+            circle_marker_efeefd73aafcb46131aab9e5355732e9.bindTooltip(
+                `<div>
+                     ALBERTO LEOPOLDO BARTON THOMPSON
+                 </div>`,
+                {
+  "direction": "top",
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_bf14b86b74ed7f0e764011d463080b24 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_2c5cc4df68e8c5697d3bdbe6a288c61c = L.circleMarker(
+                [-12.1605768, -76.9591024],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_2c5cc4df68e8c5697d3bdbe6a288c61c.bindTooltip(
+                `<div>
+                     HOSPITAL MARIA AUXILIADORA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c380ffa307f9c6fd51b8f0cc6ff8c43 = L.circleMarker(
+                [-11.9138337, -77.0395181],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_5c380ffa307f9c6fd51b8f0cc6ff8c43.bindTooltip(
+                `<div>
+                     NACIONAL SERGIO E. BERNALES
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13162c1856d950042a36884a95648cd9 = L.circleMarker(
+                [-11.9684779, -76.9955667],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_13162c1856d950042a36884a95648cd9.bindTooltip(
+                `<div>
+                     HOSPITAL AURELIO DIAZ UFANO Y PERAL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b363f0f28fb7f9dfdcf50c53ba7ae67d = L.circleMarker(
+                [-11.97723, -77.0656159],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_b363f0f28fb7f9dfdcf50c53ba7ae67d.bindTooltip(
+                `<div>
+                     HOSPITAL MUNICIPAL LOS OLIVOS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f550094a2c519e69b16144dbf87badcd = L.circleMarker(
+                [-12.0871197, -77.0619786],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_f550094a2c519e69b16144dbf87badcd.bindTooltip(
+                `<div>
+                     LUIS ARIAS SCHEREIBER - HOSPITAL MILITAR CENTRAL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1d5fe4185480374344f6bf005030c33 = L.circleMarker(
+                [-11.9438086, -77.058242],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_c1d5fe4185480374344f6bf005030c33.bindTooltip(
+                `<div>
+                     HOSPITAL I MARINO MOLINA SCIPPA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f76b449b6a0fa408da36dd8a859fc9a = L.circleMarker(
+                [-12.04757833, -76.947995],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_6f76b449b6a0fa408da36dd8a859fc9a.bindTooltip(
+                `<div>
+                     SEGURO SOCIAL DE SALUD - ESSALUD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4e5d1b7a42955803603e409c69606312 = L.circleMarker(
+                [-12.1782885, -76.9405994],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_4e5d1b7a42955803603e409c69606312.bindTooltip(
+                `<div>
+                     GUILLERMO KAELIN  DE LA FUENTE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f04e7c4c5198dc10705922fbafd67d7c = L.circleMarker(
+                [-10.75433068, -77.76436841],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_f04e7c4c5198dc10705922fbafd67d7c.bindTooltip(
+                `<div>
+                     HOSPITAL DE BARRANCA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_488235d4e4634f8af13f78ea349d0f54 = L.circleMarker(
+                [-12.0443408, -77.0440331],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_488235d4e4634f8af13f78ea349d0f54.bindTooltip(
+                `<div>
+                     HOSPITAL II RAM�N CASTILLA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c45f9dc10446cda0c6dceb14eb2ae3d8 = L.circleMarker(
+                [-12.0589571, -77.0312779],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_c45f9dc10446cda0c6dceb14eb2ae3d8.bindTooltip(
+                `<div>
+                     HOSPITAL III EMERGENCIAS GRAU
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4c2881043d328190454baa46cadbb8b = L.circleMarker(
+                [-12.0571705, -77.0162686],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_e4c2881043d328190454baa46cadbb8b.bindTooltip(
+                `<div>
+                     NACIONAL  DOS DE MAYO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9bab41cec9c89edc66a307232e7d70e = L.circleMarker(
+                [-12.0158889, -76.8201183],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_a9bab41cec9c89edc66a307232e7d70e.bindTooltip(
+                `<div>
+                     HOSPITAL DE BAJA COMPLEJIDAD HUAYCAN
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9549a33e9e702686785dd388df400702 = L.circleMarker(
+                [-12.062131, -76.9455439],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_9549a33e9e702686785dd388df400702.bindTooltip(
+                `<div>
+                     HOSPITAL I CARLOS ALCANTARA BUTTERFIELD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c40712e15c9d311cf3c1d82b10d1d5e = L.circleMarker(
+                [-12.2107672, -76.9319845],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_2c40712e15c9d311cf3c1d82b10d1d5e.bindTooltip(
+                `<div>
+                     HOSPITAL I ULDARICO ROCCA FERNANDEZ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28186b42e764d8fb46c8067e2d46347e = L.circleMarker(
+                [-12.098705, -77.065756],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_28186b42e764d8fb46c8067e2d46347e.bindTooltip(
+                `<div>
+                     HOSPITAL VICTOR LARCO HERRERA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aea23301736be9328042f3db7371d1ef = L.circleMarker(
+                [-12.0498454, -77.0425597],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_aea23301736be9328042f3db7371d1ef.bindTooltip(
+                `<div>
+                     NACIONAL ARZOBISPO LOAYZA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26637b487d178147377c58e6780743b2 = L.circleMarker(
+                [-12.1136234, -77.0279933],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_26637b487d178147377c58e6780743b2.bindTooltip(
+                `<div>
+                     ESSALUD - HOSPITAL II SU�REZ ANGAMOS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d32c0e924f819e80776c9bc2361f64f = L.circleMarker(
+                [-11.50329771, -77.21380309],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_1d32c0e924f819e80776c9bc2361f64f.bindTooltip(
+                `<div>
+                     HOSPITAL SAN JUAN BAUTISTA HUARAL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8546fe94b0ddd43086539bd5f97c0064 = L.circleMarker(
+                [-11.1133442, -77.6091848],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_8546fe94b0ddd43086539bd5f97c0064.bindTooltip(
+                `<div>
+                     HOSPITAL II GUSTAVO LANATTA LUJAN - ESSALUD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfe10200cc350263e5116164950fc547 = L.circleMarker(
+                [-12.10342333, -77.029825],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_dfe10200cc350263e5116164950fc547.bindTooltip(
+                `<div>
+                     FUERZA AEREA DEL PERU
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f1ab45b94b85172857962490c4868ba = L.circleMarker(
+                [-11.8631805, -77.079335],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_0f1ab45b94b85172857962490c4868ba.bindTooltip(
+                `<div>
+                     HOSPITAL CARLOS LANFRANCO LA HOZ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5820bd6b21577c3acdf089aa359ed072 = L.circleMarker(
+                [-12.192758, -77.0037655],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_5820bd6b21577c3acdf089aa359ed072.bindTooltip(
+                `<div>
+                     INSTITUTO NACIONAL DE REHABILITACION "DRA. ADRIANA REBAZA FLORES" AMISTAD PERU - JAPON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_480c3f94c4c0f6ae7af18c6fde243895 = L.circleMarker(
+                [-12.0399743, -76.9935755],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_480c3f94c4c0f6ae7af18c6fde243895.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL HIPOLITO UNANUE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ec3478fac9dc015ef720b9721c6db06 = L.circleMarker(
+                [-11.11552309, -77.60782172],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_1ec3478fac9dc015ef720b9721c6db06.bindTooltip(
+                `<div>
+                     HOSPITAL GENERAL DE HUACHO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_765399c5038cd0c8cdff1d66909da8e7 = L.circleMarker(
+                [-13.076235, -76.385432],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_765399c5038cd0c8cdff1d66909da8e7.bindTooltip(
+                `<div>
+                     HOSPITAL REZOLA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1e64ac1dd866b0f71dacd544d287d7a = L.circleMarker(
+                [-12.0468271, -76.9454975],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_c1e64ac1dd866b0f71dacd544d287d7a.bindTooltip(
+                `<div>
+                     HOSPITAL HERMILIO VALDIZAN
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_42ea1a79cbfa67431f551c9c63755771 = L.circleMarker(
+                [-12.0659612, -77.0945832],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_42ea1a79cbfa67431f551c9c63755771.bindTooltip(
+                `<div>
+                     HOSPITAL I OCTAVIO MONGRUT MU�OZ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76a20c3dfc4d5ca0674708695ee03018 = L.circleMarker(
+                [-11.9344473, -76.693699],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_76a20c3dfc4d5ca0674708695ee03018.bindTooltip(
+                `<div>
+                     HOSPITAL DE MEDIANA COMPLEJIDAD JOSE AGURTO TELLO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4aa376388b0880d2e46a5b603dfa3435 = L.circleMarker(
+                [-11.9665774, -77.0030573],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_4aa376388b0880d2e46a5b603dfa3435.bindTooltip(
+                `<div>
+                     HOSPITAL SAN JUAN DE LURIGANCHO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3744dc0e7dd3688e6b3d5cd01b3a57bc = L.circleMarker(
+                [-10.79690607, -77.7172015],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_3744dc0e7dd3688e6b3d5cd01b3a57bc.bindTooltip(
+                `<div>
+                     HOSPITAL DE SUPE LAURA ESTHER RODRIGUEZ DULANTO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f28b3ab0fe385cdc34c255dc6f7f6c3b = L.circleMarker(
+                [-12.0260421, -76.9199038],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_f28b3ab0fe385cdc34c255dc6f7f6c3b.bindTooltip(
+                `<div>
+                     HOSPITAL VITARTE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d93cc06ce09ae37122f605ab5b477b5 = L.circleMarker(
+                [-12.0839746, -77.0611078],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_0d93cc06ce09ae37122f605ab5b477b5.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL POLICIA NACIONAL DEL PERU GRAL PNP LUIS N. SAENZ.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3db10a41b85e535ff23978fb4b7b9418 = L.circleMarker(
+                [-12.0581708, -77.0217293],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_3db10a41b85e535ff23978fb4b7b9418.bindTooltip(
+                `<div>
+                     HOSPITAL DE EMERGENCIAS PEDIATRICAS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5da651ec6a8a17abb2965fd73907cd01 = L.circleMarker(
+                [-11.56082038, -77.27058037],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_5da651ec6a8a17abb2965fd73907cd01.bindTooltip(
+                `<div>
+                     HOSPITAL CHANCAY Y SERVICIOS BASICOS DE SALUD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8db4cdd34d8e9e9442235ee30e27b85 = L.circleMarker(
+                [-12.0220216, -77.0544967],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_b8db4cdd34d8e9e9442235ee30e27b85.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL CAYETANO HEREDIA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a002e6d991534bf52866c4d56b997ea0 = L.circleMarker(
+                [-11.842977, -76.381897],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_a002e6d991534bf52866c4d56b997ea0.bindTooltip(
+                `<div>
+                     HOSPITAL SAN JUAN DE MATUCANA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e94aed4adcae76c626dcc3f764d9891d = L.circleMarker(
+                [-12.1282107, -77.0180619],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_e94aed4adcae76c626dcc3f764d9891d.bindTooltip(
+                `<div>
+                     HOSPITAL DE EMERGENCIAS JOSE CASIMIRO ULLOA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f6626f6a009099352dd56ec6b1ae933 = L.circleMarker(
+                [-12.0716016, -77.0610651],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_8f6626f6a009099352dd56ec6b1ae933.bindTooltip(
+                `<div>
+                     HOSPITAL DE APOYO SANTA ROSA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cf7c11a3b6cfdbcd7ec6583c3814678 = L.circleMarker(
+                [-12.2326004, -76.9336669],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_1cf7c11a3b6cfdbcd7ec6583c3814678.bindTooltip(
+                `<div>
+                     HOSPITAL DE EMERGENCIAS VILLA EL SALVADOR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33f3e261659f209508566f1f3e938fa2 = L.circleMarker(
+                [-12.0499179, -77.0423608],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_33f3e261659f209508566f1f3e938fa2.bindTooltip(
+                `<div>
+                     HOSPITAL NACIONAL DOCENTE MADRE NI�O SAN BARTOLOME
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f53cce3e569e126c99138622770940af = L.circleMarker(
+                [-12.1601295, -77.0189409],
+                {"bubblingMouseEvents": true, "color": "#888888", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#888888", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf14b86b74ed7f0e764011d463080b24);
+        
+    
+            circle_marker_f53cce3e569e126c99138622770940af.bindTooltip(
+                `<div>
+                     EJERCITO PERUANO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_5a3b09b1572b9883a2a17d1e015f3d3d_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_d622cb6142cd2dbce120546f3c44abc9,
+                },
+                overlays :  {
+                    "Hospitales en LIMA (contexto)" : feature_group_bf14b86b74ed7f0e764011d463080b24,
+                },
+            };
+            let layer_control_5a3b09b1572b9883a2a17d1e015f3d3d = L.control.layers(
+                layer_control_5a3b09b1572b9883a2a17d1e015f3d3d_layers.base_layers,
+                layer_control_5a3b09b1572b9883a2a17d1e015f3d3d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_77fe4f52059e33e52bfcc1be2cd6e308);
+
+        
+</script>
+</html>

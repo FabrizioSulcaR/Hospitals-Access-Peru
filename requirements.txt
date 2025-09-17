@@ -1,5 +1,6 @@
 numpy
 streamlit
+streamlit-folium
 matplotlib
 plotly
 pandas
@@ -8,3 +9,8 @@ ipykernel
 nbformat
 geopandas
 descartes
+seaborn
+folium
+geopy
+pyproj
+shapely
